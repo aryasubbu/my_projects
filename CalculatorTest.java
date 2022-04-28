@@ -32,5 +32,9 @@ public class CalculatorTest {
 	{
 		assertEquals(cal.calcuate("1\n2"),3);
 	}
+	public void threenumbersnewlinedelimit()
+	{
+		assertEquals(cal.calcuate("1,2,3"),6);
+	}
 
 }
