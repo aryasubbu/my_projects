@@ -8,7 +8,14 @@ public class calculatorMaster {
 
 	public Object calcuate(String string) {
 
-		return -1;
+		   if(string.isEmpty())
+                    {
+    	                 return 0;
+                     }
+		     else
+                     {
+		       return string;
+                      }
 	}
 
 }
