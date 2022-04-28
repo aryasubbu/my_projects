@@ -1,10 +1,11 @@
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Test;
 import org.junit.platform.commons.annotation.Testable;
 
 @Testable
 public class CalculatorTest {
-	
+
 	
 	private calculatorMaster cal;
 	
@@ -12,29 +13,34 @@ public class CalculatorTest {
 	{
 		cal=new calculatorMaster();
 	}
-	public void emptyStringTestCase()
+	public void emptyStringTestCase() throws Exception
 	{
 
 		
 		assertEquals(cal.calcuate(""),0);
 	}
 	
-	public void singlevalue()
+	public void singlevalue() throws Exception
 	{
 		assertEquals(cal.calcuate("1"),1);
 	}
-	public void twonumbers()
+    
+	public void twonumbers() throws Exception
 	{
 		assertEquals(cal.calcuate("1,2"),3);
 	}
-	
-	public void twonumbersnewlinedelimit()
+	public void twonumbersnewlinedelimit() throws Exception
 	{
 		assertEquals(cal.calcuate("1\n2"),3);
 	}
-	public void threenumbersnewlinedelimit()
+	public void threenumbersnewlinedelimit() throws Exception
 	{
 		assertEquals(cal.calcuate("1,2,3"),6);
 	}
-
+	
+	@Test(expected=Exception.class)
+	public void negativenumbers() throws Exception
+	{
+		cal.calcuate("-1");
+	}
 }
