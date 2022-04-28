@@ -7,16 +7,23 @@ public class calculatorMaster {
 	}
 
 	public Object calcuate(String string) {
-
-	String [] numbers=string.split(",|\n");
+		String [] numbers=string.split(",|\n");
       if(string.isEmpty())
       {
     	  return 0;
-      }
-      else
+      }else
       {
-	return numbers[0]+numbers[1];
+		return getsum(numbers);
       }
+	}
+
+	private int  getsum(String[] numbers) {
+		int sum=0;
+		for(int i=0;i<numbers.length;i++)
+		{
+			sum=sum+Integer.parseInt(numbers[i]);
+		}
+		return sum;
 	}
 
 }
