@@ -8,7 +8,7 @@ public class calculatorMaster {
 
 	public Object calcuate(String string) {
 
-	String [] numbers=string.split(",");
+	String [] numbers=string.split(",|\n");
       if(string.isEmpty())
       {
     	  return 0;
