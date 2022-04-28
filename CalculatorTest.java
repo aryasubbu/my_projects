@@ -27,5 +27,10 @@ public class CalculatorTest {
 	{
 		assertEquals(cal.calcuate("1,2"),3);
 	}
+	
+	public void twonumbersnewlinedelimit()
+	{
+		assertEquals(cal.calcuate("1\n2"),3);
+	}
 
 }
