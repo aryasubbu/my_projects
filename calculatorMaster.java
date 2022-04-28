@@ -8,14 +8,15 @@ public class calculatorMaster {
 
 	public Object calcuate(String string) {
 
-		   if(string.isEmpty())
-                    {
-    	                 return 0;
-                     }
-		     else
-                     {
-		       return string;
-                      }
+	String [] numbers=string.split(",");
+      if(string.isEmpty())
+      {
+    	  return 0;
+      }
+      else
+      {
+	return numbers[0]+numbers[1];
+      }
 	}
 
 }
